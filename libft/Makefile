@@ -72,20 +72,20 @@ INCLUDE = libft.h
 all: $(NAME)
 
 bonus : $(BOBJECTS)
-	ar rcs $(NAME) $(BOBJECTS)
+	@ar rcs $(NAME) $(BOBJECTS)
 
 $(NAME): $(OBJECTS) $(INCLUDE)
-	ar rcs $(NAME) $(OBJECTS)
+	@ar rcs $(NAME) $(OBJECTS)
 
 
 %.o : %.c
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 clean:
-	rm -rf $(BOBJECTS)
+	@rm -rf $(BOBJECTS)
 
 fclean: clean
-	rm -rf $(NAME)
+	@rm -rf $(NAME)
 
 re: fclean all
 
