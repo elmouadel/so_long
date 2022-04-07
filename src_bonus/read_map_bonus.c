@@ -14,9 +14,6 @@
 
 void	map_invalid(int iden, t_par *par)
 {
-	int	i;
-
-	i = -1;
 	ft_putendl_fd("Erorr", 2);
 	if (iden == INVALID_CHAR)
 		ft_putendl_fd("Invalid character in the map!", 2);
