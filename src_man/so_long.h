@@ -66,19 +66,15 @@ typedef struct s_par
 	int		msg_py;
 }	t_par;
 
-int		close_win(t_par *par);
-char	*get_next_line(int fd);
-void	free_map(char **map);
-void	map_invalid(int iden, t_par *par);
 char	*ft_strjoin2(char *s1, char *s2);
+char	*get_next_line(int fd);
+int		close_win(t_par *par);
+void	free_map(char **map);
 int		read_map(t_par *par, char *f_map);
-void	display(t_par *par);
+void	map_invalid(int iden, t_par *par);
 void	count_col(t_par *par);
+void	display(t_par *par);
 void	put_img(t_par *par, char *img, int x, int y);
-int		move(int keycode, t_par *par);
 void	move_plyr(t_par *par, int V, int H);
-void	move_down(t_par *par);
-void	move_r(t_par *par);
-void	move_l(t_par *par);
-
+int		move(int keycode, t_par *par);
 #endif

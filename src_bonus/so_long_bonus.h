@@ -89,27 +89,23 @@ typedef struct s_par
 	int		msg_py;
 }	t_par;
 
-int		close_win(t_par *par);
+char	*ft_strjoin2(char *s1, char *s2);
 char	*get_next_line(int fd);
 int		*alloc_verify(t_par *par, int size);
-void	free_map(char **map);
-void	map_invalid(int iden, t_par *par);
-char	*ft_strjoin2(char *s1, char *s2);
-int		read_map(t_par *par, char *f_map);
-void	display(t_par *par);
+int		close_win(t_par *par);
 void	clear_win(t_par *par);
-void	count_col(t_par *par);
+void	free_map(char **map);
+int		read_map(t_par *par, char *f_map);
+void	map_invalid(int iden, t_par *par);
+void	display(t_par *par);
 void	put_img(t_par *par, char *img, int x, int y);
-int		game_end(int keycode, t_par *par);
-int		move(int keycode, t_par *par);
+void	count_col(t_par *par);
 void	move_plyr(t_par *par, int dirV, int dirH);
-void	move_down(t_par *par);
-void	move_r(t_par *par);
-void	move_l(t_par *par);
-
+int		move(int keycode, t_par *par);
+void	increment_move(t_enm *enm, t_stp *stp, t_par *par);
 void	enemy_rand_pos(t_par *par, int*x, int *y, int pass);
 void	count_prob(t_par *par, t_enm *enm, t_stp *stp);
 void	get_steps(t_enm *enm, t_stp *stp);
-void	increment_move(t_enm *enm, t_stp *stp, t_par *par);
+int		game_end(int keycode, t_par *par);
 
 #endif
